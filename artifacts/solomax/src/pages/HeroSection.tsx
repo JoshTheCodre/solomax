@@ -91,15 +91,22 @@ export default function HeroSection() {
           />
         </div>
 
-        {/* Trust strip image */}
-        <div className="w-full max-w-sm mb-6 animate-fade-up rounded-xl overflow-hidden" style={{ animationDelay: '0.43s' }}>
-          <AppImage
-            src="/assets/images/hero-trust-strip.png"
-            alt="E-Book By Yang Mun — Instant PDF access, No subscriptions, Read at your own pace"
-            width={480}
-            height={96}
-            className="w-full object-cover rounded-xl"
-          />
+        {/* Trust strip */}
+        <div
+          className="w-full max-w-sm mb-6 animate-fade-up rounded-2xl overflow-hidden px-6 py-5 flex flex-col items-center gap-3"
+          style={{
+            animationDelay: '0.43s',
+            background: 'linear-gradient(135deg, #b8860b 0%, #d4a017 35%, #c8960c 65%, #a07010 100%)',
+          }}
+        >
+          <span className="border border-white/40 rounded-full px-4 py-1 text-xs font-semibold text-white/90 tracking-wide">
+            E-Book By Yang Mun (PDF)
+          </span>
+          <ul className="flex flex-col items-start gap-1.5 text-white text-sm font-medium">
+            <li>✓ Instant PDF access</li>
+            <li>✓ No subscriptions</li>
+            <li>✓ Read at your own pace</li>
+          </ul>
         </div>
 
         {/* CTA */}
