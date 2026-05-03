@@ -23,7 +23,7 @@ export default function Footer() {
           {copy.footer.links.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={link.label === 'Contact' ? 'mailto:info@solomaxstudios.com' : link.href}
               className="text-sm font-medium text-white/40 hover:text-white transition-colors"
             >
               {link.label}
@@ -42,7 +42,6 @@ export default function Footer() {
               <Icon name={s.icon as any} size={16} />
             </a>
           ))}
-          <span className="text-xs text-white/30">{copy.footer.copyright} · solomaxstudios.com</span>
         </div>
       </div>
     </footer>
