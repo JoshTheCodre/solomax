@@ -6,9 +6,10 @@ export default function FloatingCta() {
   useEffect(() => {
     const hero = document.getElementById('book');
     const footer = document.getElementById('footer-contact');
+    const ratingsCta = document.querySelector('#ratings a[href="#lead-capture"]');
     const mobile = window.matchMedia('(max-width: 767px)').matches;
 
-    if (!hero || !footer || !mobile) return;
+    if (!hero || !footer || !ratingsCta || !mobile) return;
 
     const heroObserver = new IntersectionObserver(
       ([entry]) => setVisible(!entry.isIntersecting),
@@ -22,12 +23,21 @@ export default function FloatingCta() {
       { threshold: 0.15 }
     );
 
+    const ratingsObserver = new IntersectionObserver(
+      ([entry]) => {
+        setVisible(!entry.isIntersecting);
+      },
+      { threshold: 0.35 }
+    );
+
     heroObserver.observe(hero);
     footerObserver.observe(footer);
+    ratingsObserver.observe(ratingsCta);
 
     return () => {
       heroObserver.disconnect();
       footerObserver.disconnect();
+      ratingsObserver.disconnect();
     };
   }, []);
 
