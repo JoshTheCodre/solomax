@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FloatingCta from './components/FloatingCta';
 import HeroSection from './pages/HeroSection';
 import LeadCaptureSection from './pages/LeadCaptureSection';
 import WhyReadersLoveItSection from './pages/WhyReadersLoveItSection';
@@ -55,6 +56,7 @@ function HomePage() {
         <RatingsSection />
       </main>
       <Footer />
+      <FloatingCta />
     </>
   );
 }

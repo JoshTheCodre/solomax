@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
   const current = testimonials.items[active];
 
   return (
-    <section id="testimonials" className="py-20 px-4 bg-[#0A0A0F]">
+    <section id="testimonials" className="py-20 px-4 bg-[#0A0A0F] border-t border-white/10">
       <div ref={ref} className="reveal-hidden max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-2">{testimonials.badge}</p>
