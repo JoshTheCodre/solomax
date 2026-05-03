@@ -38,9 +38,8 @@ export default function WhyReadersLoveItSection() {
   const { whyReadersLoveIt } = copy;
 
   return (
-    <section id="why" className="py-20 px-4 bg-[#0A0A0F]">
+    <section id="why" className="py-20 px-4 bg-[#0A0A0F] border-t border-white/10">
       <div className="max-w-5xl mx-auto">
-        {/* Heading */}
         <div className="mb-14 text-center">
           <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-primary mb-4 border border-primary/30 rounded-full px-4 py-1.5">
             {whyReadersLoveIt.badge}
@@ -51,7 +50,6 @@ export default function WhyReadersLoveItSection() {
           <p className="text-white/50 text-base max-w-md mx-auto">{whyReadersLoveIt.subheadline}</p>
         </div>
 
-        {/* Features grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {whyReadersLoveIt.features.map((feature) => (
             <div

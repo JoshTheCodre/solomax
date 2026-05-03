@@ -4,24 +4,25 @@ export default function FloatingCta() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const leadCapture = document.getElementById('lead-capture');
-    const ratings = document.getElementById('ratings');
+    const hero = document.getElementById('book');
+    const why = document.getElementById('why');
     const footer = document.getElementById('footer-contact');
     const mobile = window.matchMedia('(max-width: 767px)').matches;
 
-    if (!leadCapture || !ratings || !footer || !mobile) return;
+    if (!hero || !why || !footer || !mobile) return;
 
-    const leadObserver = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
-      { threshold: 0.05 }
-    );
-
-    const ratingsObserver = new IntersectionObserver(
+    const heroObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setVisible(false);
-        else setVisible(true);
       },
-      { threshold: 0.15 }
+      { threshold: 0.2 }
+    );
+
+    const whyObserver = new IntersectionObserver(
+      ([entry]) => {
+        setVisible(entry.isIntersecting);
+      },
+      { threshold: 0.05, rootMargin: '80px 0px 0px 0px' }
     );
 
     const footerObserver = new IntersectionObserver(
@@ -31,13 +32,13 @@ export default function FloatingCta() {
       { threshold: 0.1 }
     );
 
-    leadObserver.observe(leadCapture);
-    ratingsObserver.observe(ratings);
+    heroObserver.observe(hero);
+    whyObserver.observe(why);
     footerObserver.observe(footer);
 
     return () => {
-      leadObserver.disconnect();
-      ratingsObserver.disconnect();
+      heroObserver.disconnect();
+      whyObserver.disconnect();
       footerObserver.disconnect();
     };
   }, []);
