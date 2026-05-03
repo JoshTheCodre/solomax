@@ -88,15 +88,15 @@ export default function HeroSection() {
         </div>
 
         <div
-          className="w-full max-w-sm mb-6 animate-fade-up flex flex-col items-center gap-3"
+          className="w-full max-w-sm mb-6 animate-fade-up flex flex-col items-center gap-2 sm:gap-3"
           style={{ animationDelay: '0.43s' }}
         >
-          <p className="flex items-baseline gap-2 tracking-tight">
-            <span className="font-sans text-base font-light text-white/60 tracking-widest uppercase">
+          <div className="flex flex-col items-center gap-0.5 sm:gap-1 leading-none text-center">
+            <span className="font-sans text-[11px] sm:text-xs font-semibold text-white/65 tracking-[0.32em] uppercase whitespace-nowrap">
               E-Book by
             </span>
             <span
-              className="font-display text-2xl font-bold italic"
+              className="font-display text-2xl sm:text-2xl font-bold italic whitespace-nowrap"
               style={{
                 background: 'linear-gradient(90deg, #ffffff 0%, #93c5fd 50%, #3b82f6 100%)',
                 WebkitBackgroundClip: 'text',
@@ -106,10 +106,10 @@ export default function HeroSection() {
             >
               SoloMax Studios
             </span>
-            <span className="font-sans text-xs font-semibold tracking-[0.2em] text-white/30 uppercase">
+            <span className="font-sans text-[11px] sm:text-xs font-semibold tracking-[0.24em] text-white/35 uppercase whitespace-nowrap">
               [PDF]
             </span>
-          </p>
+          </div>
           <ul className="flex flex-col items-center gap-1.5 text-white/70 text-sm font-medium">
             <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Instant PDF access</li>
             <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> No subscriptions</li>
