@@ -4,15 +4,23 @@ export default function FloatingCta() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const hero = document.getElementById('book');
+    const leadCapture = document.getElementById('lead-capture');
+    const ratings = document.getElementById('ratings');
     const footer = document.getElementById('footer-contact');
-    const ratingsCta = document.querySelector('#ratings a[href="#lead-capture"]');
     const mobile = window.matchMedia('(max-width: 767px)').matches;
 
-    if (!hero || !footer || !ratingsCta || !mobile) return;
+    if (!leadCapture || !ratings || !footer || !mobile) return;
 
-    const heroObserver = new IntersectionObserver(
+    const leadObserver = new IntersectionObserver(
       ([entry]) => setVisible(!entry.isIntersecting),
+      { threshold: 0.05 }
+    );
+
+    const ratingsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(false);
+        else setVisible(true);
+      },
       { threshold: 0.15 }
     );
 
@@ -20,24 +28,17 @@ export default function FloatingCta() {
       ([entry]) => {
         if (entry.isIntersecting) setVisible(false);
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
-    const ratingsObserver = new IntersectionObserver(
-      ([entry]) => {
-        setVisible(!entry.isIntersecting);
-      },
-      { threshold: 0.35 }
-    );
-
-    heroObserver.observe(hero);
+    leadObserver.observe(leadCapture);
+    ratingsObserver.observe(ratings);
     footerObserver.observe(footer);
-    ratingsObserver.observe(ratingsCta);
 
     return () => {
-      heroObserver.disconnect();
-      footerObserver.disconnect();
+      leadObserver.disconnect();
       ratingsObserver.disconnect();
+      footerObserver.disconnect();
     };
   }, []);
 
@@ -45,10 +46,7 @@ export default function FloatingCta() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 flex justify-center p-4 pointer-events-none md:hidden">
-      <a
-        href="#lead-capture"
-        className="pointer-events-auto btn-primary px-6 py-4 rounded-full text-sm font-bold shadow-2xl shadow-black/40"
-      >
+      <a href="#lead-capture" className="pointer-events-auto btn-primary px-6 py-4 rounded-full text-sm font-bold shadow-2xl shadow-black/40">
         Get My Digital Copy
       </a>
     </div>
