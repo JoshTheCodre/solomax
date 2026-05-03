@@ -61,7 +61,7 @@ export default function HeroSection() {
           <em className="font-light italic text-white/90">{hero.headlineItalic}</em>
         </h1>
         <p
-          className="text-base sm:text-lg font-medium text-primary/90 mb-2 animate-fade-up tracking-wide uppercase"
+          className="text-base sm:text-lg font-medium text-white mb-2 animate-fade-up tracking-wide uppercase"
           style={{ animationDelay: '0.3s' }}
         >
           {hero.subheadline}
