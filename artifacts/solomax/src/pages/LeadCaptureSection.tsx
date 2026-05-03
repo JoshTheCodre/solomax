@@ -5,6 +5,7 @@ import copy from '../content/copy.json';
 export default function LeadCaptureSection() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [country, setCountry] = useState(copy.leadCapture.countries[0]);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -63,11 +64,22 @@ export default function LeadCaptureSection() {
               </div>
               <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder={leadCapture.emailPlaceholder} className="form-input-light w-full rounded-xl px-4 py-4 pl-12 text-sm" aria-label="Email address" />
             </div>
-            <div className="relative">
-              <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                <Icon name="PhoneIcon" size={18} className="text-primary/50" />
+            <div className="flex gap-2">
+              <label className="w-[112px] shrink-0">
+                <span className="sr-only">Country code</span>
+                <select value={country.iso} onChange={(e) => setCountry(leadCapture.countries.find((item) => item.iso === e.target.value) || leadCapture.countries[0])} className="form-input-light w-full rounded-xl px-3 py-4 text-sm h-full">
+                  {leadCapture.countries.map((item) => (
+                    <option key={item.iso} value={item.iso}>{item.label} {item.code}</option>
+                  ))}
+                </select>
+              </label>
+              <div className="relative flex-1">
+                <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none flex items-center gap-2">
+                  <span className="text-lg leading-none">{country.iso === 'US' ? '🇺🇸' : country.iso === 'NG' ? '🇳🇬' : country.iso === 'GB' ? '🇬🇧' : country.iso === 'CA' ? '🇨🇦' : country.iso === 'BR' ? '🇧🇷' : country.iso === 'AU' ? '🇦🇺' : '🌍'}</span>
+                  <Icon name="PhoneIcon" size={18} className="text-primary/50" />
+                </div>
+                <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={leadCapture.phonePlaceholder} className="form-input-light w-full rounded-xl px-4 py-4 pl-16 text-sm" aria-label="Phone number" />
               </div>
-              <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={leadCapture.phonePlaceholder} className="form-input-light w-full rounded-xl px-4 py-4 pl-12 text-sm" aria-label="Phone number" />
             </div>
             <button type="submit" disabled={loading} className="btn-primary w-full py-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
               {loading ? (

@@ -32,7 +32,16 @@
     "submitCta": "Get this offer now",
     "disclaimer": "No spam. Unsubscribe anytime. Your data is safe with us.",
     "successTitle": "You're in!",
-    "successMessage": "Check your inbox for Chapter 1 + your exclusive discount link."
+    "successMessage": "Check your inbox for Chapter 1 + your exclusive discount link.",
+    "countries": [
+      { "code": "+1", "iso": "US", "label": "USA" },
+      { "code": "+234", "iso": "NG", "label": "Nigeria" },
+      { "code": "+44", "iso": "GB", "label": "UK" },
+      { "code": "+1", "iso": "CA", "label": "Canada" },
+      { "code": "+55", "iso": "BR", "label": "Brazil" },
+      { "code": "+61", "iso": "AU", "label": "Australia" },
+      { "code": "+91", "iso": "IN", "label": "India" }
+    ]
   },
   "sectionLinks": {
     "heroCta": "#lead-capture",
