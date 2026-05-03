@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import AppImage from '../components/ui/AppImage';
+import CountdownTimer from '../components/CountdownTimer';
 import copy from '../content/copy.json';
 
 const avatarUrls = [
@@ -108,6 +109,11 @@ export default function HeroSection() {
         >
           <span className="w-2 h-2 rounded-full bg-primary inline-block animate-ping" />
           {hero.urgency}
+        </div>
+
+        {/* Countdown */}
+        <div className="mt-6">
+          <CountdownTimer />
         </div>
 
         {/* Scroll arrow */}

@@ -331,6 +331,11 @@
   fill: #D1D5DB;
 }
 
+/* Countdown block flip */
+.countdown-block {
+  transition: transform 0.2s ease;
+}
+
 /* Fade up animation */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(20px); }
