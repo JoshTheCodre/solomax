@@ -19,7 +19,7 @@ function HomePage() {
             name: 'Bulletproof Your YouTube Channel 2026',
             applicationCategory: 'EducationalApplication',
             description: 'The anti-demonetization blueprint for YouTubers. Stay monetized, avoid strikes, and protect your YouTube income in 2026.',
-            offers: { '@type': 'Offer', price: '10.99', priceCurrency: 'USD' },
+            offers: { '@type': 'Offer', price: '25.00', priceCurrency: 'USD' },
             aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '7000' },
           }),
         }}

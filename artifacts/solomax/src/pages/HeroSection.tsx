@@ -39,11 +39,6 @@ export default function HeroSection() {
       />
       <div className="relative z-20 flex flex-col items-center text-center px-4 pt-24 pb-16 w-full max-w-3xl mx-auto">
 
-        {/* Countdown — top of hero */}
-        <div className="mb-8 animate-fade-up" style={{ animationDelay: '0.05s' }}>
-          <CountdownTimer />
-        </div>
-
         {/* Social proof bar */}
         <div className="flex items-center gap-3 mb-8 glass-light border border-white/15 rounded-full px-5 py-2.5 animate-fade-up" style={{ animationDelay: '0.1s' }}>
           <div className="flex -space-x-2">
@@ -80,30 +75,32 @@ export default function HeroSection() {
           {hero.tagline}
         </p>
 
-        {/* Book Cover */}
-        <div className="book-float mb-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          <AppImage
-            src="/assets/images/book-cover-main.png"
-            alt="Bulletproof Your YouTube Channel 2026 book cover"
-            width={280}
-            height={320}
-            className="object-contain drop-shadow-2xl rounded-lg"
-          />
+        {/* Book Cover + Countdown stacked */}
+        <div className="relative mb-6 animate-fade-up flex flex-col items-center" style={{ animationDelay: '0.4s' }}>
+          {/* Countdown sits directly above the book */}
+          <div className="mb-3">
+            <CountdownTimer />
+          </div>
+          <div className="book-float">
+            <AppImage
+              src="/assets/images/book-cover-main.png"
+              alt="Bulletproof Your YouTube Channel 2026 book cover"
+              width={280}
+              height={320}
+              className="object-contain drop-shadow-2xl rounded-lg"
+            />
+          </div>
         </div>
 
         {/* Trust strip */}
         <div
-          className="w-full max-w-sm mb-6 animate-fade-up rounded-2xl px-6 py-5 flex flex-col items-center gap-3 border border-primary/30"
-          style={{
-            animationDelay: '0.43s',
-            background: 'linear-gradient(135deg, rgba(26,86,219,0.18) 0%, rgba(26,86,219,0.08) 100%)',
-            backdropFilter: 'blur(12px)',
-          }}
+          className="w-full max-w-sm mb-6 animate-fade-up flex flex-col items-center gap-3"
+          style={{ animationDelay: '0.43s' }}
         >
-          <span className="border border-primary/50 rounded-full px-4 py-1 text-xs font-bold text-primary tracking-widest uppercase">
-            E-Book by SoloMax Studios (PDF)
-          </span>
-          <ul className="flex flex-col items-center gap-1.5 text-white/85 text-sm font-medium">
+          <p className="font-display text-lg font-semibold text-white tracking-wide">
+            E-Book by <span className="text-primary">SoloMax Studios</span> <span className="text-white/40 font-light text-sm">(PDF)</span>
+          </p>
+          <ul className="flex flex-col items-center gap-1.5 text-white/70 text-sm font-medium">
             <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Instant PDF access</li>
             <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> No subscriptions</li>
             <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Read at your own pace</li>
@@ -123,7 +120,7 @@ export default function HeroSection() {
         <div className="flex flex-col items-center gap-1 mb-4 animate-fade-up" style={{ animationDelay: '0.55s' }}>
           <span className="text-4xl font-display font-bold text-white">{hero.price}</span>
           <span className="text-sm text-white/50">
-            Normally <span className="price-strike font-semibold">{hero.originalPrice}</span>
+            Formally <span className="price-strike font-semibold">{hero.originalPrice}</span>
           </span>
         </div>
 

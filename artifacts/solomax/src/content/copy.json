@@ -26,10 +26,10 @@
     "badge": "Claim Your Copy",
     "headline": "Get Your Free Chapter",
     "headlineAccent": "+ Exclusive Offer",
-    "description": "Enter your details to receive Chapter 1 free and unlock the limited-time price of $10.99.",
+    "description": "Enter your details to receive Chapter 1 free and unlock the limited-time price of $25.00.",
     "emailPlaceholder": "Email address",
     "phonePlaceholder": "Phone number (optional)",
-    "submitCta": "Get Offer — Free Chapter + $10.99 Price",
+    "submitCta": "Get Offer — Free Chapter + $25.00 Price",
     "disclaimer": "No spam. Unsubscribe anytime. Your data is safe with us.",
     "successTitle": "You're in!",
     "successMessage": "Check your inbox for Chapter 1 + your exclusive discount link."
@@ -105,7 +105,7 @@
       { "icon": "BoltIcon", "label": "Instant Download" },
       { "icon": "UserGroupIcon", "label": "7,000+ Buyers" }
     ],
-    "cta": "Get Your Copy — $10.99",
+    "cta": "Get Your Copy — $25.00",
     "ctaDisclaimer": "30-day money-back guarantee · Instant PDF delivery"
   },
   "footer": {
