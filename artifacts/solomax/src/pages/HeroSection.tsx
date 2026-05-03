@@ -97,21 +97,25 @@ export default function HeroSection() {
           className="w-full max-w-sm mb-6 animate-fade-up flex flex-col items-center gap-3"
           style={{ animationDelay: '0.43s' }}
         >
-          <p
-            className="font-display text-xl font-bold tracking-tight"
-            style={{
-              background: 'linear-gradient(90deg, #ffffff 0%, #93c5fd 45%, #3b82f6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            E-Book by SoloMax Studios{' '}
+          <p className="flex items-baseline gap-2 tracking-tight">
             <span
-              className="font-light text-sm tracking-widest"
-              style={{ WebkitTextFillColor: 'rgba(255,255,255,0.35)', color: 'rgba(255,255,255,0.35)' }}
+              className="font-sans text-base font-light text-white/60 tracking-widest uppercase"
             >
-              PDF
+              E-Book by
+            </span>
+            <span
+              className="font-display text-2xl font-bold italic"
+              style={{
+                background: 'linear-gradient(90deg, #ffffff 0%, #93c5fd 50%, #3b82f6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              SoloMax Studios
+            </span>
+            <span className="font-sans text-xs font-semibold tracking-[0.2em] text-white/30 uppercase">
+              [PDF]
             </span>
           </p>
           <ul className="flex flex-col items-center gap-1.5 text-white/70 text-sm font-medium">
