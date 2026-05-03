@@ -93,19 +93,20 @@ export default function HeroSection() {
 
         {/* Trust strip */}
         <div
-          className="w-full max-w-sm mb-6 animate-fade-up rounded-2xl overflow-hidden px-6 py-5 flex flex-col items-center gap-3"
+          className="w-full max-w-sm mb-6 animate-fade-up rounded-2xl px-6 py-5 flex flex-col items-center gap-3 border border-primary/30"
           style={{
             animationDelay: '0.43s',
-            background: 'linear-gradient(135deg, #b8860b 0%, #d4a017 35%, #c8960c 65%, #a07010 100%)',
+            background: 'linear-gradient(135deg, rgba(26,86,219,0.18) 0%, rgba(26,86,219,0.08) 100%)',
+            backdropFilter: 'blur(12px)',
           }}
         >
-          <span className="border border-white/40 rounded-full px-4 py-1 text-xs font-semibold text-white/90 tracking-wide">
-            E-Book By Yang Mun (PDF)
+          <span className="border border-primary/50 rounded-full px-4 py-1 text-xs font-bold text-primary tracking-widest uppercase">
+            E-Book by SoloMax Studios (PDF)
           </span>
-          <ul className="flex flex-col items-start gap-1.5 text-white text-sm font-medium">
-            <li>✓ Instant PDF access</li>
-            <li>✓ No subscriptions</li>
-            <li>✓ Read at your own pace</li>
+          <ul className="flex flex-col items-center gap-1.5 text-white/85 text-sm font-medium">
+            <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Instant PDF access</li>
+            <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> No subscriptions</li>
+            <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Read at your own pace</li>
           </ul>
         </div>
 
