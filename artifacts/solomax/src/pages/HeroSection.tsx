@@ -97,8 +97,22 @@ export default function HeroSection() {
           className="w-full max-w-sm mb-6 animate-fade-up flex flex-col items-center gap-3"
           style={{ animationDelay: '0.43s' }}
         >
-          <p className="font-display text-lg font-semibold text-white tracking-wide">
-            E-Book by <span className="text-primary">SoloMax Studios</span> <span className="text-white/40 font-light text-sm">(PDF)</span>
+          <p
+            className="font-display text-xl font-bold tracking-tight"
+            style={{
+              background: 'linear-gradient(90deg, #ffffff 0%, #93c5fd 45%, #3b82f6 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            E-Book by SoloMax Studios{' '}
+            <span
+              className="font-light text-sm tracking-widest"
+              style={{ WebkitTextFillColor: 'rgba(255,255,255,0.35)', color: 'rgba(255,255,255,0.35)' }}
+            >
+              PDF
+            </span>
           </p>
           <ul className="flex flex-col items-center gap-1.5 text-white/70 text-sm font-medium">
             <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Instant PDF access</li>
