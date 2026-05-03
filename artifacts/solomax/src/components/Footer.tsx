@@ -3,13 +3,13 @@ import Icon from './ui/AppIcon';
 import copy from '../content/copy.json';
 
 const socialLinks = [
-  { icon: 'GlobeAltIcon', href: '#', label: 'YouTube' },
+  { icon: 'GlobeAltIcon', href: 'https://solomaxstudios.com', label: 'Website' },
   { icon: 'ChatBubbleLeftIcon', href: '#', label: 'Twitter' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/8 py-12 px-4">
+    <footer id="footer-contact" className="border-t border-white/8 py-12 px-4">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center">
           <img
@@ -42,7 +42,7 @@ export default function Footer() {
               <Icon name={s.icon as any} size={16} />
             </a>
           ))}
-          <span className="text-xs text-white/30">{copy.footer.copyright}</span>
+          <span className="text-xs text-white/30">{copy.footer.copyright} · solomaxstudios.com</span>
         </div>
       </div>
     </footer>

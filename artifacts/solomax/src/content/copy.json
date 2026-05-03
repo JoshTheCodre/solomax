@@ -4,7 +4,7 @@
       { "label": "Book", "href": "#book" },
       { "label": "About", "href": "#about" },
       { "label": "Reviews", "href": "#testimonials" },
-      { "label": "Contact", "href": "#contact" }
+      { "label": "Contact", "href": "#footer-contact" }
     ],
     "cta": "Get the Book"
   },
@@ -15,7 +15,7 @@
     },
     "headline": "Bulletproof Your",
     "headlineItalic": "YouTube Channel",
-    "subheadline": "The Anti-Demonetization Blueprint — 2026",
+    "subheadline": "The Anti-Demonetization Blueprint (2026)",
     "tagline": "Stay Monetized. Avoid Strikes. Protect Your YouTube Income.",
     "cta": "Get Instant Access",
     "price": "$25.00",
@@ -65,7 +65,7 @@
         "author": "Marcus T.",
         "role": "Tech Reviewer",
         "channel": "85K subscribers",
-        "avatar": "https://img.rocket.new/generatedImages/rocket_gen_img_1bef30479-1769451961102.png",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
         "stars": 5
       },
       {
@@ -73,7 +73,7 @@
         "author": "Priya S.",
         "role": "Lifestyle Creator",
         "channel": "120K subscribers",
-        "avatar": "https://img.rocket.new/generatedImages/rocket_gen_img_199b5e6a2-1772208128897.png",
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
         "stars": 5
       },
       {
@@ -81,7 +81,7 @@
         "author": "Jordan W.",
         "role": "Gaming Creator",
         "channel": "210K subscribers",
-        "avatar": "https://img.rocket.new/generatedImages/rocket_gen_img_131ede86e-1773056685456.png",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
         "stars": 5
       }
     ]
@@ -112,7 +112,7 @@
     "links": [
       { "label": "Privacy", "href": "/privacy" },
       { "label": "Terms", "href": "/terms" },
-      { "label": "Contact", "href": "#contact" },
+      { "label": "Contact", "href": "#footer-contact" },
       { "label": "About", "href": "#about" }
     ],
     "copyright": "© 2026 SoloMax Studios"
