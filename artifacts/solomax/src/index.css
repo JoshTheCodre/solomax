@@ -50,8 +50,8 @@
   --radius: 0.75rem;
 
   /* Light section vars */
-  --light-bg: #C2D9F5;
-  --light-foreground: #0A0A0F;
+  --light-bg: #1a6fa8;
+  --light-foreground: #ffffff;
   --light-border: rgba(0, 0, 0, 0.08);
 }
 
