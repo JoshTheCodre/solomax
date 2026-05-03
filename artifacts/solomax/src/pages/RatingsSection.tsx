@@ -28,7 +28,7 @@ export default function RatingsSection() {
   }, []);
 
   return (
-    <section className="py-20 px-4 bg-[#0D0D14] border-t border-white/6" id="ratings">
+    <section className="py-20 px-4 bg-[#0D0D14] border-t border-white/10" id="ratings">
       <div ref={ref} className="reveal-hidden max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">{ratings.badge}</p>

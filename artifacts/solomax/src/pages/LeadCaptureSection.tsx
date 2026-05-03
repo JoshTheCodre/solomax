@@ -29,7 +29,7 @@ export default function LeadCaptureSection() {
   };
 
   return (
-    <section id="lead-capture" className="relative py-20 px-4 overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(10,10,15,0.94) 0%, rgba(10,10,15,0.88) 100%)' }}>
+    <section id="lead-capture" className="relative py-20 px-4 overflow-hidden border-b border-white/10" style={{ background: 'linear-gradient(180deg, rgba(10,10,15,0.94) 0%, rgba(10,10,15,0.88) 100%)' }}>
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)', backgroundSize: '36px 36px' }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/6 blur-[140px] pointer-events-none" />
 

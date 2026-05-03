@@ -34,6 +34,11 @@
     "successTitle": "You're in!",
     "successMessage": "Check your inbox for Chapter 1 + your exclusive discount link."
   },
+  "sectionLinks": {
+    "heroCta": "#lead-capture",
+    "floatingCta": "#lead-capture",
+    "footerContact": "mailto:info@solomaxstudios.com"
+  },
   "whyReadersLoveIt": {
     "badge": "What's Inside",
     "headline": "Why Creators Love This Blueprint",
@@ -112,7 +117,7 @@
     "links": [
       { "label": "Privacy", "href": "/privacy" },
       { "label": "Terms", "href": "/terms" },
-      { "label": "Contact", "href": "#footer-contact" },
+      { "label": "Contact", "href": "mailto:info@solomaxstudios.com" },
       { "label": "About", "href": "#about" }
     ],
     "copyright": "© 2026 SoloMax Studios"

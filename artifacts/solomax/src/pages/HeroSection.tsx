@@ -16,7 +16,7 @@ export default function HeroSection() {
   return (
     <section
       id="book"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden border-b border-white/10"
       style={{ minHeight: '100svh' }}
     >
       <div className="absolute inset-0 z-0">
@@ -38,8 +38,6 @@ export default function HeroSection() {
         style={{ top: 0 }}
       />
       <div className="relative z-20 flex flex-col items-center text-center px-4 pt-24 pb-16 w-full max-w-3xl mx-auto">
-
-        {/* Social proof bar */}
         <div className="flex items-center gap-3 mb-8 glass-light border border-white/15 rounded-full px-5 py-2.5 animate-fade-up" style={{ animationDelay: '0.1s' }}>
           <div className="flex -space-x-2">
             {avatarUrls.map((url, i) => (
@@ -53,7 +51,6 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* Headline */}
         <h1
           className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-3 animate-fade-up"
           style={{ animationDelay: '0.2s' }}
@@ -75,9 +72,7 @@ export default function HeroSection() {
           {hero.tagline}
         </p>
 
-        {/* Book Cover + Countdown stacked */}
         <div className="relative mb-6 animate-fade-up flex flex-col items-center" style={{ animationDelay: '0.4s' }}>
-          {/* Countdown sits directly above the book */}
           <div className="mb-3">
             <CountdownTimer />
           </div>
@@ -92,15 +87,12 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Trust strip */}
         <div
           className="w-full max-w-sm mb-6 animate-fade-up flex flex-col items-center gap-3"
           style={{ animationDelay: '0.43s' }}
         >
           <p className="flex items-baseline gap-2 tracking-tight">
-            <span
-              className="font-sans text-base font-light text-white/60 tracking-widest uppercase"
-            >
+            <span className="font-sans text-base font-light text-white/60 tracking-widest uppercase">
               E-Book by
             </span>
             <span
@@ -125,16 +117,14 @@ export default function HeroSection() {
           </ul>
         </div>
 
-        {/* CTA */}
         <a
-          href="#lead-capture"
+          href={copy.sectionLinks.heroCta}
           className="btn-primary pulse-glow px-10 py-4 rounded-full text-base font-bold mb-6 animate-fade-up"
           style={{ animationDelay: '0.5s' }}
         >
           {hero.cta}
         </a>
 
-        {/* Price */}
         <div className="flex flex-col items-center gap-1 mb-4 animate-fade-up" style={{ animationDelay: '0.55s' }}>
           <span className="text-4xl font-display font-bold text-white">{hero.price}</span>
           <span className="text-sm text-white/50">
@@ -142,7 +132,6 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* Urgency */}
         <div
           className="urgency-text flex items-center gap-2 text-primary font-semibold text-sm tracking-wide animate-fade-up"
           style={{ animationDelay: '0.6s' }}
@@ -151,7 +140,6 @@ export default function HeroSection() {
           {hero.urgency}
         </div>
 
-        {/* Scroll arrow */}
         <button
           className="mt-10 animate-bounce opacity-60 hover:opacity-100 transition-opacity cursor-pointer bg-transparent border-none p-0"
           aria-label="Scroll to next section"

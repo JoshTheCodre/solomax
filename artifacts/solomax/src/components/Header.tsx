@@ -43,7 +43,7 @@ export default function Header() {
         </nav>
 
         <a
-          href="#lead-capture"
+          href={copy.sectionLinks.heroCta}
           className="hidden md:flex btn-primary px-5 py-2 rounded-full text-sm font-semibold"
         >
           {copy.nav.cta}
@@ -70,7 +70,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#lead-capture"
+            href={copy.sectionLinks.heroCta}
             onClick={handleLinkClick}
             className="mt-2 btn-primary px-5 py-3 rounded-full text-sm font-semibold text-center"
           >
