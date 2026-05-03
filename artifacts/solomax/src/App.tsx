@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HeroSection from './pages/HeroSection';
 import LeadCaptureSection from './pages/LeadCaptureSection';
+import WhyReadersLoveItSection from './pages/WhyReadersLoveItSection';
 import TestimonialsSection from './pages/TestimonialsSection';
 import RatingsSection from './pages/RatingsSection';
 
@@ -49,6 +50,7 @@ function HomePage() {
       <main>
         <HeroSection />
         <LeadCaptureSection />
+        <WhyReadersLoveItSection />
         <TestimonialsSection />
         <RatingsSection />
       </main>

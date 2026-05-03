@@ -34,6 +34,43 @@
     "successTitle": "You're in!",
     "successMessage": "Check your inbox for Chapter 1 + your exclusive discount link."
   },
+  "whyReadersLoveIt": {
+    "badge": "What's Inside",
+    "headline": "Why Creators Love This Blueprint",
+    "subheadline": "Everything you need to keep your channel safe, monetized, and growing.",
+    "features": [
+      {
+        "icon": "shield",
+        "title": "Proven Protection Strategies",
+        "description": "Battle-tested methods used by real creators to stay safe from strikes and demonetization — no guesswork."
+      },
+      {
+        "icon": "bolt",
+        "title": "Stay Monetized",
+        "description": "Step-by-step techniques to keep your channel's monetization active and your ad revenue flowing."
+      },
+      {
+        "icon": "book",
+        "title": "Clear, Fast Reads",
+        "description": "Concise chapters with actionable wins you can apply to your next upload immediately."
+      },
+      {
+        "icon": "download",
+        "title": "Instant PDF Access",
+        "description": "Download your copy the moment you purchase — no waiting, no subscriptions, no hassle."
+      },
+      {
+        "icon": "device",
+        "title": "Read Anywhere",
+        "description": "Optimized for mobile, tablet, and desktop so you can learn on any device, anytime."
+      },
+      {
+        "icon": "gift",
+        "title": "Free Bonus Included",
+        "description": "Get the exclusive \"Strike Response Playbook\" free — a step-by-step guide to appeal and win back your revenue."
+      }
+    ]
+  },
   "testimonials": {
     "badge": "Creator Results",
     "headline": "What Creators Are Saying",

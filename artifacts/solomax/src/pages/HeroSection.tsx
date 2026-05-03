@@ -38,6 +38,12 @@ export default function HeroSection() {
         style={{ top: 0 }}
       />
       <div className="relative z-20 flex flex-col items-center text-center px-4 pt-24 pb-16 w-full max-w-3xl mx-auto">
+
+        {/* Countdown — top of hero */}
+        <div className="mb-8 animate-fade-up" style={{ animationDelay: '0.05s' }}>
+          <CountdownTimer />
+        </div>
+
         {/* Social proof bar */}
         <div className="flex items-center gap-3 mb-8 glass-light border border-white/15 rounded-full px-5 py-2.5 animate-fade-up" style={{ animationDelay: '0.1s' }}>
           <div className="flex -space-x-2">
@@ -75,13 +81,24 @@ export default function HeroSection() {
         </p>
 
         {/* Book Cover */}
-        <div className="book-float mb-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+        <div className="book-float mb-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
           <AppImage
             src="/assets/images/book-cover-main.png"
             alt="Bulletproof Your YouTube Channel 2026 book cover"
             width={280}
             height={320}
             className="object-contain drop-shadow-2xl rounded-lg"
+          />
+        </div>
+
+        {/* Trust strip image */}
+        <div className="w-full max-w-sm mb-6 animate-fade-up rounded-xl overflow-hidden" style={{ animationDelay: '0.43s' }}>
+          <AppImage
+            src="/assets/images/hero-trust-strip.png"
+            alt="E-Book By Yang Mun — Instant PDF access, No subscriptions, Read at your own pace"
+            width={480}
+            height={96}
+            className="w-full object-cover rounded-xl"
           />
         </div>
 
@@ -109,11 +126,6 @@ export default function HeroSection() {
         >
           <span className="w-2 h-2 rounded-full bg-primary inline-block animate-ping" />
           {hero.urgency}
-        </div>
-
-        {/* Countdown */}
-        <div className="mt-6">
-          <CountdownTimer />
         </div>
 
         {/* Scroll arrow */}
