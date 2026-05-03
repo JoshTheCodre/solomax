@@ -67,20 +67,25 @@ export default function LeadCaptureSection() {
               <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder={leadCapture.emailPlaceholder} className="form-input-light w-full rounded-xl px-4 py-4 pl-12 text-sm" aria-label="Email address" />
             </div>
             <div className="flex gap-2">
-              <label className="w-[112px] shrink-0">
+              <label className="w-[160px] shrink-0">
                 <span className="sr-only">Country code</span>
-                <select value={country.iso} onChange={(e) => setCountry(leadCapture.countries.find((item) => item.iso === e.target.value) || leadCapture.countries[0])} className="form-input-light w-full rounded-xl px-3 py-4 text-sm h-full">
-                  {leadCapture.countries.map((item) => (
-                    <option key={item.iso} value={item.iso}>{item.label} {item.code}</option>
-                  ))}
-                </select>
+                <div className="relative">
+                  <div className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2 z-10">
+                    <img src={getFlagUrl(country.iso)} alt={`${country.label} flag`} className="w-5 h-5 rounded-full object-cover" />
+                    <span className="text-xs font-semibold text-white/80">{country.code}</span>
+                  </div>
+                  <select value={country.iso} onChange={(e) => setCountry(leadCapture.countries.find((item) => item.iso === e.target.value) || leadCapture.countries[0])} className="form-input-light w-full rounded-xl py-4 pl-[70px] pr-3 text-sm h-full">
+                    {leadCapture.countries.map((item) => (
+                      <option key={item.iso} value={item.iso}>{item.label} {item.code}</option>
+                    ))}
+                  </select>
+                </div>
               </label>
               <div className="relative flex-1">
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none flex items-center gap-2">
-                  <img src={getFlagUrl(country.iso)} alt={`${country.label} flag`} className="w-5 h-5 rounded-full object-cover" />
                   <Icon name="PhoneIcon" size={18} className="text-primary/50" />
                 </div>
-                <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={leadCapture.phonePlaceholder} className="form-input-light w-full rounded-xl px-4 py-4 pl-16 text-sm" aria-label="Phone number" />
+                <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={leadCapture.phonePlaceholder} className="form-input-light w-full rounded-xl px-4 py-4 pl-12 text-sm" aria-label="Phone number" />
               </div>
             </div>
             <button type="submit" disabled={loading} className="btn-primary w-full py-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
