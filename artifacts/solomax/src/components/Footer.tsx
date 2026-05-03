@@ -1,12 +1,6 @@
 import React from 'react';
 import Icon from './ui/AppIcon';
-
-const footerLinks = [
-  { label: 'Privacy', href: '/privacy' },
-  { label: 'Terms', href: '/terms' },
-  { label: 'Contact', href: '#contact' },
-  { label: 'About', href: '#about' },
-];
+import copy from '../content/copy.json';
 
 const socialLinks = [
   { icon: 'GlobeAltIcon', href: '#', label: 'YouTube' },
@@ -15,18 +9,18 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/8 py-16 px-4">
+    <footer className="border-t border-white/8 py-12 px-4">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center">
           <img
-            src="/assets/images/logo-smax-new-removebg-preview-1777750285549.png"
+            src="/assets/images/smax-logo-new.png"
             alt="SoloMax Studios logo"
-            style={{ height: 52, width: 'auto', filter: 'brightness(0) invert(1)' }}
+            style={{ height: 36, width: 'auto' }}
           />
         </div>
 
         <div className="flex items-center gap-6 flex-wrap justify-center">
-          {footerLinks.map((link) => (
+          {copy.footer.links.map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -48,7 +42,7 @@ export default function Footer() {
               <Icon name={s.icon as any} size={16} />
             </a>
           ))}
-          <span className="text-xs text-white/30">© 2026 SoloMax Studios</span>
+          <span className="text-xs text-white/30">{copy.footer.copyright}</span>
         </div>
       </div>
     </footer>
