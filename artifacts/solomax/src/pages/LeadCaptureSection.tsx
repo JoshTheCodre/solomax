@@ -2,15 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Icon from '../components/ui/AppIcon';
 import copy from '../content/copy.json';
 
-const getFlagEmoji = (iso: string) => {
-  if (iso === 'US') return '🇺🇸';
-  if (iso === 'NG') return '🇳🇬';
-  if (iso === 'GB') return '🇬🇧';
-  if (iso === 'CA') return '🇨🇦';
-  if (iso === 'BR') return '🇧🇷';
-  if (iso === 'AU') return '🇦🇺';
-  return '🌍';
-};
+const getFlagUrl = (iso: string) => `https://flagsapi.com/${iso}/flat/24.png`;
 
 export default function LeadCaptureSection() {
   const [email, setEmail] = useState('');
@@ -85,7 +77,7 @@ export default function LeadCaptureSection() {
               </label>
               <div className="relative flex-1">
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none flex items-center gap-2">
-                  <span className="text-lg leading-none">{getFlagEmoji(country.iso)}</span>
+                  <img src={getFlagUrl(country.iso)} alt={`${country.label} flag`} className="w-5 h-5 rounded-full object-cover" />
                   <Icon name="PhoneIcon" size={18} className="text-primary/50" />
                 </div>
                 <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={leadCapture.phonePlaceholder} className="form-input-light w-full rounded-xl px-4 py-4 pl-16 text-sm" aria-label="Phone number" />
