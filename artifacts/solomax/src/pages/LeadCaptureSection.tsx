@@ -67,16 +67,16 @@ export default function LeadCaptureSection() {
               <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder={leadCapture.emailPlaceholder} className="form-input-light w-full rounded-xl px-4 py-4 pl-12 text-sm" aria-label="Email address" />
             </div>
             <div className="flex gap-2">
-              <label className="w-[160px] shrink-0">
+              <label className="w-[132px] shrink-0">
                 <span className="sr-only">Country code</span>
                 <div className="relative">
                   <div className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2 z-10">
-                    <img src={getFlagUrl(country.iso)} alt={`${country.label} flag`} className="w-5 h-5 rounded-full object-cover" />
-                    <span className="text-xs font-semibold text-white/80">{country.code}</span>
+                    <img src={getFlagUrl(country.iso)} alt="" aria-hidden="true" className="w-5 h-5 rounded-full object-cover" />
+                    <span className="text-xs font-semibold text-black">{country.code}</span>
                   </div>
-                  <select value={country.iso} onChange={(e) => setCountry(leadCapture.countries.find((item) => item.iso === e.target.value) || leadCapture.countries[0])} className="form-input-light w-full rounded-xl py-4 pl-[70px] pr-3 text-sm h-full">
+                  <select value={country.iso} onChange={(e) => setCountry(leadCapture.countries.find((item) => item.iso === e.target.value) || leadCapture.countries[0])} className="form-input-light w-full rounded-xl py-4 pl-[68px] pr-3 text-sm h-full text-black">
                     {leadCapture.countries.map((item) => (
-                      <option key={item.iso} value={item.iso}>{item.label} {item.code}</option>
+                      <option key={item.iso} value={item.iso}>{item.code}</option>
                     ))}
                   </select>
                 </div>
