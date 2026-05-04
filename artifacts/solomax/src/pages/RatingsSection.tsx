@@ -70,7 +70,7 @@ export default function RatingsSection() {
         </div>
 
         <div className="text-center">
-          <a href="#lead-capture" className="btn-primary inline-flex items-center gap-2 px-10 py-4 rounded-full text-base font-bold">
+          <a href="https://checkout.solomaxstudios.com/" className="btn-primary inline-flex items-center gap-2 px-10 py-4 rounded-full text-base font-bold">
             {ratings.cta}
           </a>
           <p className="text-xs text-white/30 mt-3">{ratings.ctaDisclaimer}</p>
