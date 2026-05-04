@@ -44,8 +44,8 @@
     ]
   },
   "sectionLinks": {
-    "heroCta": "#lead-capture",
-    "floatingCta": "#lead-capture",
+    "heroCta": "https://checkout.solomaxstudios.com/",
+    "floatingCta": "https://checkout.solomaxstudios.com/",
     "footerContact": "mailto:info@solomaxstudios.com"
   },
   "whyReadersLoveIt": {
