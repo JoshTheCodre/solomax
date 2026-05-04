@@ -5,7 +5,7 @@ import copy from '../content/copy.json';
 
 const avatarUrls = [
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
-  'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80',
+  'https://images.unsplash.com/photo-1675469675830-11d9a6099ef4?q=80&w=415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
 ];
 
