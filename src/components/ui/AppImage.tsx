@@ -23,6 +23,7 @@ const AppImage = memo(function AppImage({
   fill = false,
   onClick,
   fallbackSrc = '/assets/images/no_image.png',
+  style: propStyle,
   ...props
 }: AppImageProps) {
   const [imageSrc, setImageSrc] = useState(src);
@@ -54,7 +55,7 @@ const AppImage = memo(function AppImage({
         className={imageClassName}
         onError={handleError}
         onClick={onClick}
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', ...propStyle }}
         {...props}
       />
     );

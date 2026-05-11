@@ -25,7 +25,6 @@ export default function HeroSection() {
             src="https://images.unsplash.com/photo-1632042704576-7ae3ef405c78"
             alt="Misty golden sunrise over a calm lake"
             fill
-            className="object-cover"
             style={{ objectPosition: 'center 35%' }}
           />
         </div>
