@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import FloatingCta from './components/FloatingCta';
 import HeroSection from './pages/HeroSection';
 import WhyReadersLoveItSection from './pages/WhyReadersLoveItSection';
+import AboutSection from './pages/AboutSection';
 import TestimonialsSection from './pages/TestimonialsSection';
 import RatingsSection from './pages/RatingsSection';
 import FreeCopySection from './pages/FreeCopySection';
@@ -51,6 +52,7 @@ function HomePage() {
       <main>
         <HeroSection />
         <WhyReadersLoveItSection />
+        <AboutSection />
         <TestimonialsSection />
         <RatingsSection />
         <FreeCopySection />
