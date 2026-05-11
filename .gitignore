@@ -42,7 +42,6 @@ testem.log
 Thumbs.db
 
 # Environment variables
-.env
 .env.local
 
 .cursor/rules/nx-rules.mdc
