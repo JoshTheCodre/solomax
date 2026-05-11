@@ -45,6 +45,17 @@ export default function FreeCopySection() {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !reason.trim()) return;
     setFormState('submitting');
+
+    const sheetsUrl = import.meta.env.VITE_GOOGLE_SHEETS_URL as string | undefined;
+    if (sheetsUrl) {
+      fetch(sheetsUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({ name, email, reason, submittedAt: new Date().toISOString() }),
+      }).catch(() => {});
+    }
+
     setTimeout(() => {
       setFormState('success');
       setShowModal(true);
@@ -109,7 +120,7 @@ export default function FreeCopySection() {
                   'The 3 most-violated YouTube policies — and how to fix them',
                   'Core monetization mindset every creator needs',
                   'Real examples from channels that bounced back',
-                  'Instant PDF delivery. No credit card needed.',
+                  'Download instantly. No credit card, no sign-up.',
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3 text-sm text-white/65">
                     <span className="text-amber-400 font-bold mt-0.5 flex-shrink-0">✓</span>
@@ -130,22 +141,17 @@ export default function FreeCopySection() {
 
             {/* Right: form or success */}
             {formState === 'success' ? (
-              <div className="flex flex-col items-center justify-center text-center gap-5 py-16">
+              <div className="flex flex-col items-center justify-center text-center gap-5 py-12">
                 <div className="w-16 h-16 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center pulse-glow">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#63B3ED" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
-                <h3 className="font-display text-2xl font-bold text-white">You're on the list!</h3>
+                <h3 className="font-display text-2xl font-bold text-white">You're all set.</h3>
                 <p className="text-white/50 text-sm max-w-xs leading-relaxed">
-                  Your free preview is on its way — check your inbox. Welcome to the community.
+                  Enjoy the preview, genuinely hope it helps. We have a feeling you'll be back for the full copy. Good luck out there.
                 </p>
-                <button
-                  onClick={() => setShowModal(true)}
-                  className="text-xs text-white/30 hover:text-white/55 underline underline-offset-2 transition-colors"
-                >
-                  See what creators say about the full edition →
-                </button>
+                <p className="text-white/25 text-xs italic">— The SoloMax team</p>
               </div>
             ) : (
               <div className="free-copy-card-outer">
@@ -301,13 +307,13 @@ export default function FreeCopySection() {
                 {/* Collapsible trigger */}
                 <button
                   onClick={() => setCollapsibleOpen(!collapsibleOpen)}
-                  className="w-full flex items-center justify-between px-5 py-3.5 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.07] text-sm font-semibold text-white/60 hover:text-white/90 transition-all"
+                  className="btn-free-copy-alt w-full px-5 py-3.5 rounded-xl text-sm !justify-between"
                 >
                   <span>Get the full free preview</span>
                   <svg
                     width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                    className={`transition-transform duration-300 ${collapsibleOpen ? 'rotate-180' : ''}`}
+                    className={`transition-transform duration-300 flex-shrink-0 ${collapsibleOpen ? 'rotate-180' : ''}`}
                   >
                     <polyline points="6 9 12 15 18 9" />
                   </svg>

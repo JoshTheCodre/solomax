@@ -46,7 +46,7 @@
   "sectionLinks": {
     "heroCta": "https://checkout.solomaxstudios.com/",
     "floatingCta": "https://checkout.solomaxstudios.com/",
-    "footerContact": "mailto:info@solomaxstudios.com"
+    "footerContact": "mailto:support@solomaxstudios.com"
   },
   "whyReadersLoveIt": {
     "badge": "What's Inside",
@@ -126,7 +126,7 @@
     "links": [
       { "label": "Privacy", "href": "/privacy" },
       { "label": "Terms", "href": "/terms" },
-      { "label": "Contact", "href": "mailto:info@solomaxstudios.com" },
+      { "label": "Contact", "href": "mailto:support@solomaxstudios.com" },
       { "label": "About", "href": "#about" }
     ],
     "copyright": "© 2026 SoloMax Studios"
