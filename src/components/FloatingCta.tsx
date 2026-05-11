@@ -47,7 +47,7 @@ export default function FloatingCta() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 flex justify-center p-4 pointer-events-none md:hidden">
-      <a href="#lead-capture" className="pointer-events-auto btn-primary px-6 py-4 rounded-full text-sm font-bold shadow-2xl shadow-black/40">
+      <a href="https://checkout.solomaxstudios.com/" className="pointer-events-auto btn-primary px-6 py-4 rounded-full text-sm font-bold shadow-2xl shadow-black/40">
         Get My Digital Copy
       </a>
     </div>
