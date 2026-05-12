@@ -4,50 +4,38 @@ export default function FloatingCta() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const hero = document.getElementById('book');
-    const why = document.getElementById('why');
-    const footer = document.getElementById('footer-contact');
-    const mobile = window.matchMedia('(max-width: 767px)').matches;
+    const update = () => {
+      const hero = document.getElementById('book');
+      const ratings = document.getElementById('ratings');
+      if (!hero || !ratings) return;
 
-    if (!hero || !why || !footer || !mobile) return;
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      const ratingsRect = ratings.getBoundingClientRect();
+      const ratingsMiddle = ratingsRect.top + ratingsRect.height / 2;
 
-    const heroObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setVisible(false);
-      },
-      { threshold: 0.2 }
-    );
+      const pastHero = heroBottom < 0;
+      const ratingsReached = ratingsMiddle <= window.innerHeight / 2;
 
-    const whyObserver = new IntersectionObserver(
-      ([entry]) => {
-        setVisible(entry.isIntersecting);
-      },
-      { threshold: 0.05, rootMargin: '80px 0px 0px 0px' }
-    );
-
-    const footerObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setVisible(false);
-      },
-      { threshold: 0.1 }
-    );
-
-    heroObserver.observe(hero);
-    whyObserver.observe(why);
-    footerObserver.observe(footer);
-
-    return () => {
-      heroObserver.disconnect();
-      whyObserver.disconnect();
-      footerObserver.disconnect();
+      setVisible(pastHero && !ratingsReached);
     };
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+    return () => window.removeEventListener('scroll', update);
   }, []);
 
-  if (!visible) return null;
-
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 flex justify-center p-4 pointer-events-none md:hidden">
-      <a href="https://checkout.solomaxstudios.com/" className="pointer-events-auto btn-primary px-6 py-4 rounded-full text-sm font-bold shadow-2xl shadow-black/40">
+    <div
+      className={`fixed bottom-0 left-0 right-0 z-40 flex justify-center p-4 pointer-events-none md:hidden transition-all duration-300 ${
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+      }`}
+    >
+      <a
+        href="https://checkout.solomaxstudios.com/"
+        className={`btn-primary px-6 py-4 rounded-full text-sm font-bold shadow-2xl shadow-black/40 transition-all duration-300 ${
+          visible ? 'pointer-events-auto' : 'pointer-events-none'
+        }`}
+      >
         Get My Digital Copy
       </a>
     </div>

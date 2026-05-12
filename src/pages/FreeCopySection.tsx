@@ -106,8 +106,8 @@ export default function FreeCopySection() {
                 style={{ filter: 'drop-shadow(0 30px 60px rgba(26,86,219,0.45)) drop-shadow(0 8px 20px rgba(0,0,0,0.6))' }}
               >
                 <AppImage
-                  src="/assets/images/book-cover-main.png"
-                  alt="Bulletproof Your YouTube Channel 2026"
+                  src="/free-book-cover.jpeg"
+                  alt="Bulletproof Your YouTube Channel — Free Preview Edition"
                   width={200}
                   height={240}
                   className="object-contain rounded-lg"
