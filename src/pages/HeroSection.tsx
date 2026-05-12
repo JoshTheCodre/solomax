@@ -150,7 +150,7 @@ export default function HeroSection() {
           className="mt-10 animate-bounce opacity-60 hover:opacity-100 transition-opacity cursor-pointer bg-transparent border-none p-0"
           aria-label="Scroll to next section"
           onClick={() => {
-            const next = document.getElementById('lead-capture');
+            const next = document.getElementById('why');
             if (next) next.scrollIntoView({ behavior: 'smooth' });
           }}
         >
